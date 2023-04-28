@@ -1,0 +1,4 @@
+<h1>Demonstration of parent to child and child to parent component communication</h1>
+
+<app-demo [Message]="ParentMessage"(Obj)="ChildMessage=$event"></app-demo>
+<h1>{{ChildMessage}}</h1>
