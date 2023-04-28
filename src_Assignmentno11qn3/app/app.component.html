@@ -1,0 +1,5 @@
+<h2>Enter the number that you want to check</h2>
+<input [(ngModel)]="value"   type="number" min="1" max="10"><br>
+<h2>Enter what to check</h2>
+<input [(ngModel)]="str"   type="text"><br>
+{{value | marvellousChk:str}}

@@ -1,0 +1,10 @@
+<h1>Inside child component which uses number and string service</h1>
+<h2>Enter the number to check it is prime or not</h2>
+<input  #data="" type="number" ><br>
+<button (click)="Child1(data.value)">Enter</button>
+{{str1}}<br>
+<h2>Enter the string to calculate capital alphabets</h2>
+<input  #datastring="" type="text" ><br>
+<button (click)="Child2(datastring.value)">Enter</button><br>
+{{"Capital alphabets in "+datastring.value+ " are "+Count}}
+
