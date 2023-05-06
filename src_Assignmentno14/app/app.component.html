@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align image in html</title>
+
+    
+    <style>
+      img {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+        
+      <img src="https://cdn.thewirecutter.com/wp-content/media/2022/07/laptop-under-500-2048px-acer-1.jpg"  height="200px" width="200px" />
+    </p>
+  </body>
+</html>
+
+
+ 
+  <h1 align="center" [style.color]="'purple'">Contact Our</h1>
+  <h1 align="center">Customer Support Center</h1>
+  
+  <form [formGroup]="NewForm">
+      <div class="row">
+          <div class="col">
+           <label><b>First Name</b></label>
+           <input [class.is-invalid] = "NewForm.get('Firstname')?.invalid" type="text" class="form-control form-control-sm" formControlName="Firstname" >
+           <small [class.d-none]="NewForm.get('Firstname')?.valid" class="text-danger">Name is required</small><br>
+          </div>
+          <div class="col">
+             <label><b>Last Name</b></label>
+             <input  type="text" class="form-control form-control-sm" formControlName="Lastname" >
+          </div>
+        </div>
+      <label><b>Phone Number</b></label>
+      <input [class.is-invalid] = "NewForm.get('PhoneNumber')?.invalid" type="number" onblur="validatePhoneNumber()" class="form-control form-control-sm" formControlName="PhoneNumber" >
+      <small [class.d-none]="NewForm.get('PhoneNumber')?.valid" class="text-danger">Phone Number should contain 10 digits</small><br>
+    
+    <label><b>EmailId</b></label>
+    <input [class.is-invalid] = "NewForm.get('EmailId')?.invalid" type="email" placeholder="abc@example.com" class="form-control form-control-sm" formControlName="EmailId" >
+    <small [class.d-none]="NewForm.get('EmailId')?.valid" class="text-danger">Email is required</small><br>
+
+    <label><b>City</b></label>
+    <input  type="text" class="form-control form-control-sm" formControlName="City">
+    <label for="State"><b>State</b></label>
+    <select name="State" id="State">
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+    </select>
+    <br>
+    <label><b>ZipCode</b></label>
+    <input  type="text" class="form-control form-control-sm" formControlName="ZipCode">
+    <label><b>Comments</b></label>
+    <textarea  rows="5" cols="10" class="form-control form-control-sm" formControlName="Comments"></textarea>
+    <div>
+      <button  class="btn btn-primary" onclick="alert('Form Submitted sucessfully')" [disabled]="NewForm.invalid">Submit</button>
+    </div>
+    
+  </form>
+
+
